@@ -33,6 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project1111.
+          echo test, and deploy your project test.
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
