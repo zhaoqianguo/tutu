@@ -8,6 +8,10 @@ interface DailyBriefing {
   imgsrc: string;
 }
 
+interface Tian<T> {
+  result: T;
+}
+
 // 彩虹屁
 interface Caihongpi {
   content: string;

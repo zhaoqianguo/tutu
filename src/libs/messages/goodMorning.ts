@@ -1,3 +1,4 @@
+import { sendMessage } from './../wxNotify/index';
 /**
  * morning
  */
@@ -9,7 +10,8 @@ const CONFIG = getConfig().message;
 const tianMessages = async () => {
   const res = await api.getCaihongpi();
 
-  console.log(res);
+  console.log(res.result.content);
+  sendMessage(res.result.content);
 };
 
 export async function goodMorning() {

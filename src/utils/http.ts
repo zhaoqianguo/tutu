@@ -23,3 +23,17 @@ export const getTian = <T>(url: string, options?: AxiosRequestConfig): Promise<T
     ...options,
   });
 };
+
+export const get = (url: string, options?: AxiosRequestConfig) => {
+  return request(url, {
+    method: 'GET',
+    ...options,
+  });
+};
+
+export const post = (url: string, options?: AxiosRequestConfig) => {
+  return request(url, {
+    method: 'POST',
+    ...options,
+  });
+};

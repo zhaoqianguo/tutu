@@ -1,11 +1,5 @@
+import { MessageUrl } from '../enum/messageUrl';
 import { getTian } from '../utils/http';
-
-enum MessageUrl {
-  // 每日简报
-  dailyBriefing = 'http://api.tianapi.com/bulletin/index',
-  // 彩虹屁
-  caihongpi = 'https://apis.tianapi.com/caihongpi/index',
-}
 
 class Api {
   constructor() {}
@@ -17,8 +11,8 @@ class Api {
   }
 
   // 彩虹屁
-  async getCaihongpi(): Promise<Caihongpi[]> {
-    const res = await getTian<Caihongpi[]>(MessageUrl.caihongpi);
+  async getCaihongpi(): Promise<Tian<Caihongpi>> {
+    const res = await getTian<Tian<Caihongpi>>(MessageUrl.caihongpi);
     return res;
   }
 }
