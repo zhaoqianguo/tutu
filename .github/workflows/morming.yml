@@ -48,7 +48,7 @@ jobs:
 
       # 5. 运行脚本
       - name: 运行脚本
-        run: pnpm start
+#         run: pnpm start
         env:
           WX_COMPANY_ID: ${{ secrets.WX_COMPANY_ID }}
           WX_APP_ID: ${{ secrets.WX_APP_ID }}
